@@ -1,0 +1,398 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(35deg, #7564e6, #9198e5, #000);
+  background-repeat: no-repeat;
+  width: 100vw;
+  display: grid;
+  height: 100vh;
+  place-content: center;
+}
+
+.register {
+  display: flex;
+  letter-spacing: 2px;
+  position: absolute;
+  width: 90%;
+  height: 20%;
+  font-size: 0px;
+  top: 35px;
+  left: 15px;
+  // border: #000 solid 5px;
+  overflow: hidden;
+}
+
+.registerContent {
+  display: flex;
+  letter-spacing: 2px;
+  position: absolute;
+  width: 90%;
+  height: 50%;
+  font-size: 0px;
+  top: 70px;
+  left: 15px;
+  // border: red solid 5px;
+  overflow: hidden;
+}
+
+.limpia {
+  background-image: url(img/escoba.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  border: solid black;
+  border-radius: 50%;
+  position: absolute;
+  top: 0%;
+  left: 130px;
+  bottom: 0;
+}
+
+
+
+
+.ojoC {
+  background-image: url(img/ojoCerrado.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  border: solid black;
+  border-radius: 50%;
+  position: absolute;
+  top: 0%;
+  left: 250px;
+  bottom: 0;
+}
+
+.ojoA {
+  background-image: url(img/ojo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 25px;
+  width: 30px;
+  height: 30px;
+  border: solid black;
+  border-radius: 50%;
+  position: absolute;
+  top: 0%;
+  left: 250px;
+  bottom: 0;
+  display: none;
+}
+
+.calculadora-grilla {
+  margin-top: 1px;
+  border: 2px solid #000;
+  height: 100vh;
+  padding: 15px;
+  background: linear-gradient(35deg, #7474dc, #000030);
+
+}
+
+.output {
+  font-weight: 100px;
+  border: #000 solid 5px;
+  width: 100%;
+  height: 20%;
+}
+
+.visor {
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  text-align-last: right;
+  letter-spacing: 2px;
+}
+
+.teclado {
+  width: 30%;
+  height: 60vh;
+  font-size: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+}
+
+.c-h {
+  display: flex;
+  justify-content: space-around;
+  margin: 35px 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.c-h>button {
+  background-color: rgb(23, 23, 56);
+
+  cursor: pointer;
+  font-size: larger;
+  width: 50px;
+  color: #fff;
+  border: 2px solid#fff;
+
+  &:hover {
+    background-color: rgb(81, 81, 240);
+    border: 1px solid rgb(81, 81, 240);
+    color: rgb(243, 243, 249);
+    box-shadow: inset 0 0 50px 20px rgb(23, 23, 56);
+  }
+}
+
+.teclado>button {
+  background-color: rgb(23, 23, 56);
+  cursor: pointer;
+  font-size: larger;
+  border: 1px solid#fff;
+  color: #fff;
+
+  &:hover {
+    background-color: rgb(81, 81, 240);
+    border: 1px solid rgb(81, 81, 240);
+    color: rgb(243, 243, 249);
+    box-shadow: inset 0 0 50px 20px rgb(23, 23, 56);
+  }
+}
+
+
+.teclado .data-opera {
+  background-color: #210520;
+
+  &:hover {
+    background-color: #210821;
+    color: rgb(243, 243, 249);
+  }
+}
+
+.calculadora-grilla>button:hover {
+  cursor: pointer;
+  background-color: red;
+  position: absolute;
+}
+
+.nodal {
+  background-color: #9198e5;
+  width: 20%;
+  height: 20%;
+  margin-top: 25px;
+  border: 1px solid #fff;
+  position: absolute;
+  right: 45px;
+  display: none;
+}
+
+.btn_cerrar {
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  border: solid black;
+  border-radius: 50%;
+}
+
+.cerrar {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+}
+
+//BUTTON FOR UP THE HISTORIAL
+.btn1_subir {
+  letter-spacing: 1.5px;
+  border-radius: 50%;
+  position: absolute;
+  left: 40%;
+  width: 60px;
+  height: 40px;
+  border: #000 solid 2px;
+  bottom: 5px;
+  display: flex;
+  // display: none;
+}
+
+.btn_abajo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0px;
+  bottom: 0px;
+  // transform: rotate(180deg);
+}
+
+//END OF THE IMAGEN ROTATE IMAGEN ARROW
+
+//BUTTON FOR DOWN THE HISTORIAL
+.btn2_bajar {
+  letter-spacing: 1.5px;
+  border-radius: 50%;
+  left: 40%;
+  position: absolute;
+  border: #000 solid 2px;
+  width: 60px;
+  height: 40px;
+  background: transparent;
+  bottom: 5px;
+  display: none;
+}
+
+.btn_arriba {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  border-radius: 50%;
+}
+
+
+
+// // imagen del .btn1_subir  abajo
+
+@media (max-width: 768px) {
+  .calculadora-grilla {
+    display: inline-flex;
+    flex-direction: column;
+    border: 2px solid #000;
+    height: 40vh;
+    padding: 15px;
+    overflow: auto;
+    background: linear-gradient(35deg,
+        #7474dc,
+        #000000,
+        #0d0e0d,
+        #000030,
+        #000);
+  }
+
+  .output {
+    font-weight: 100px;
+    border: #000 solid 5px;
+    width: 100%;
+    height: 20%;
+  }
+
+  .visor {
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    text-align-last: right;
+    letter-spacing: 2px;
+  }
+
+  .teclado {
+    width: 30%;
+    height: 20vh;
+    font-size: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+  }
+
+  .c-h {
+    display: flex;
+    justify-content: space-around;
+    margin: 2px 0;
+    outline: none;
+    cursor: pointer;
+    max-width: 110px;
+  }
+
+  .c-h>button {
+    background-color: #9198e5;
+    outline: none;
+    cursor: pointer;
+    font-size: larger;
+    width: 50px;
+
+    &:hover {
+      background-color: rgb(164, 136, 241);
+      border: 1px solid #fff;
+      color: blue;
+      box-shadow: inset 0 0 50px 20px grey;
+    }
+  }
+
+  .teclado>button {
+    background-color: #9198e5;
+    outline: none;
+    cursor: pointer;
+    font-size: larger;
+
+    &:hover {
+      background-color: rgb(164, 136, 241);
+      border: 1px solid #fff;
+      color: blue;
+      box-shadow: inset 0 0 50px 20px grey;
+    }
+  }
+
+  .calculadora-grilla>button:hover {
+
+    cursor: pointer;
+    background-color: red;
+    position: absolute;
+  }
+
+  .nodal {
+    overflow-y: scroll;
+    background-color: #9198e5;
+    width: 90%;
+    max-height: 30%;
+    border: 1px solid #fff;
+    position: absolute;
+    left: 25px;
+    top: -20px;
+    display: none;
+  }
+
+
+
+  .btn_2 {
+    letter-spacing: 1.5px;
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    left: 30%;
+    width: 40%;
+    position: absolute;
+    font-size: 20px;
+    box-shadow: inset 0 2px 5px 6px rgb(109, 109, 215);
+    display: none;
+  }
+
+  .ojoC {
+
+    top: 0%;
+    left: 400px;
+    bottom: 0;
+  }
+  
+  .ojoA {
+
+    left: 400px;
+    bottom: 0;
+    display: none;
+  }
+  
+
+  .btnHistorial {
+    display: flex;
+    letter-spacing: 1.5px;
+    border-radius: 50%;
+    position: absolute;
+    left: 40%;
+    width: 20%;
+    height: 30%;
+    background: #fff;
+    bottom: 5px;
+  }
+
+  .btn_abajo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
